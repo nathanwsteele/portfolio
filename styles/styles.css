@@ -7,11 +7,12 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 90%; }
+  width: 90%;
+  max-width: 1600px; }
 
 h1 {
   font-size: 50px;
-  margin: 30px auto;
+  margin: 30px 0;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #160902; }
@@ -20,8 +21,8 @@ h1:after {
   content: ' ';
   display: block;
   border: 1px solid #160902;
-  width: 20%;
-  margin: 0 auto; }
+  margin: 9px auto;
+  width: 100px; }
 
 h2 {
   font-size: 2.2em;
@@ -47,6 +48,11 @@ section {
   margin: 0;
   width: 100%; }
 
+a,
+a:hover,
+a:focus {
+  text-decoration: none; }
+
 /* ......Custom styles ................*/
 .gap {
   margin: 5px 0 15px 0; }
@@ -61,19 +67,21 @@ section {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
 .floating-card {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .floating-card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
 .animate,
 nav ul li,
-.cta {
-  -o-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+.cta,
+.work_thumb_button,
+.work_thumb_overlay,
+.floating-card {
+  -o-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .cta {
   border: 1px solid #fff;
@@ -89,6 +97,48 @@ nav ul li,
 .cta:hover {
   background-color: rgba(255, 255, 255, 0.38);
   text-shadow: 0px 0px 11px #000000; }
+
+.info_card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 15px auto;
+  width: 100%;
+  cursor: pointer;
+  height: inherit;
+  overflow: hidden; }
+
+.work_thumb_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  background-color: #ededf1;
+  height: 45px;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #270606;
+  margin: auto;
+  opacity: 0;
+  color: #000; }
+
+.work_thumb_overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px 15px 15px 15px;
+  padding: 0px;
+  bottom: 0;
+  display: block;
+  left: 0;
+  background-color: #000; }
+
+.work_link:hover > .work_thumb_overlay {
+  opacity: 0.5; }
+
+.work_link:hover > .work_thumb_button {
+  opacity: 1; }
 
 /* BLACK ...........................................*/
 .black {
@@ -113,10 +163,10 @@ section {
 
 /* DARK BROWN ................................................*/
 .dark {
-  color: #160902; }
+  color: #270606; }
 
 .dark_bg {
-  background-color: #160902; }
+  background-color: #270606; }
 
 /* Light   ..............................................................*/
 .light,
@@ -137,10 +187,10 @@ section {
 
 /* GRAY ........................................*/
 .gray {
-  color: #888888; }
+  color: #cad1d1; }
 
 .gray_bg {
-  background-color: #888888; }
+  background-color: #cad1d1; }
 
 /* Icon styles ......................................................... */
 .fa {
@@ -201,42 +251,33 @@ section {
 .video-container video.fillWidth {
   width: 100%; }
 
-/* NAV */
+/* NAV .................................................................*/
 nav {
   width: 560px;
   z-index: 3;
   position: absolute;
   top: 0;
   right: 0; }
+  nav ul {
+    margin: 0 auto;
+    padding: 0;
+    height: inherit;
+    display: inline-block; }
+  nav ul li {
+    float: left;
+    list-style: none;
+    height: inherit;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 7px 15px 3px; }
+  nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.38);
+    cursor: pointer; }
+  nav ul li a {
+    cursor: pointer;
+    font-size: 20px; }
 
-nav ul {
-  margin: 0 auto;
-  padding: 0;
-  height: inherit;
-  display: inline-block; }
-
-nav ul li {
-  float: left;
-  list-style: none;
-  height: inherit;
-  line-height: 40px;
-  text-transform: uppercase;
-  padding: 7px 15px 3px; }
-
-nav ul li:hover {
-  background-color: rgba(255, 255, 255, 0.38);
-  cursor: pointer; }
-
-nav ul li a {
-  cursor: pointer;
-  font-size: 20px; }
-
-nav ul li a,
-nav ul li a:hover,
-nav ul li a:focus {
-  text-decoration: none; }
-
-/* HOME */
+/* HOME.................................................................................. */
 #home {
   background-color: #000;
   height: inherit;
@@ -252,19 +293,16 @@ nav ul li a:focus {
   font-size: 2em;
   right: 0;
   text-align: center; }
-
-#banner h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3em;
-  margin: 0; }
-
-#banner h1:after {
-  border: none; }
-
-#banner h2 {
-  font-size: 2.2em;
-  font-family: 'Open Sans Condensed', sans-serif;
-  margin: 0; }
+  #banner h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    margin: 0; }
+  #banner h1:after {
+    border: none; }
+  #banner h2 {
+    font-size: 2.2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0; }
 
 #home_ctas {
   position: absolute;
@@ -274,41 +312,45 @@ nav ul li a:focus {
   width: 631px;
   text-align: center;
   margin: 0 auto; }
+  #home_ctas .cta {
+    float: left; }
 
-#home_ctas .cta {
-  float: left; }
-
-/* SKILLS */
+/* SKILLS ..........................................................................*/
 #skills {
   height: inherit; }
+  #skills ul {
+    margin: 0;
+    padding: 0; }
+  #skills ul li {
+    list-style: none;
+    height: 46px;
+    display: block;
+    line-height: 27px;
+    margin: 0; }
 
 .skills_holder {
   margin: 0 auto;
-  width: 720px;
+  width: 965px;
   overflow: hidden; }
 
 .skill_col {
   float: left;
-  width: 40px;
-  margin-left: 20px; }
+  width: 160px;
+  margin-left: 48px; }
 
 .star_col {
   float: left;
-  width: 250px;
-  margin-left: 20px; }
-
-#skills ul {
-  margin-bottom: 0; }
-
-#skills ul li {
-  list-style: none;
-  height: 40px;
-  display: block; }
+  width: 200px; }
 
 .skill_item {
-  padding: 0; }
+  padding: 0;
+  font-size: 24px; }
 
-/* Media Queries */
+/* WORK ................................................................................ */
+#work {
+  background-color: #ededf1; }
+
+/* Media Queries ....................................................................*/
 /* BIG SNAP to Mobile */
 @media screen and (max-width: 767px) {
   .skills_holder {

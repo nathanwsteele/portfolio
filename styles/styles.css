@@ -57,7 +57,8 @@ a:focus {
 .gap {
   margin: 5px 0 15px 0; }
 
-.light-shadow {
+.light-shadow,
+.info_card {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .shadow {
@@ -99,7 +100,7 @@ nav ul li,
   text-shadow: 0px 0px 11px #000000; }
 
 .info_card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #ababab;
   margin: 15px auto;
   width: 100%;
   cursor: pointer;
@@ -121,6 +122,11 @@ nav ul li,
   margin: auto;
   opacity: 0;
   color: #000; }
+
+.work_thumb_button:hover {
+  background-color: #000;
+  border: 1px solid #ededf1;
+  color: #ededf1; }
 
 .work_thumb_overlay {
   opacity: 0;

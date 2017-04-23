@@ -4,6 +4,13 @@ $(document).ready(function(){
     
     $(window).scroll(function(){    
         var scrl_tp = $(this).scrollTop();
+        if(scrl_tp >= 130){
+            $('nav').addClass('transparent_black');
+            console.log("BLACK");
+        }else{
+            $('nav').removeClass('transparent_black');
+            console.log("TRANSPARENT");
+        }
         /*$('#home').css('background-position','50% ' + (parseInt(-scrl_tp/4) + startingPos)+ 'px');*/
     });     
     

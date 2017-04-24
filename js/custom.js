@@ -14,6 +14,21 @@ $(document).ready(function(){
         /*$('#home').css('background-position','50% ' + (parseInt(-scrl_tp/4) + startingPos)+ 'px');*/
     });     
     
+    
+    
+    $('.contact_btn').on('click', function(){
+        var elem = $(this).attr('data-target');
+        console.log(elem);
+        $('.info').addClass('hiding');
+        $('.' + elem).removeClass('hiding');
+    });
+    
+    
+    
+    
+    
+    
+    
     /*  Smooth scrolling nav ...........................................  */
     $(function () {
         $('a[href*="#"]:not([href="#"])').on('click', function () {

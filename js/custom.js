@@ -6,27 +6,17 @@ $(document).ready(function(){
         var scrl_tp = $(this).scrollTop();
         if(scrl_tp >= 130){
             $('nav').addClass('transparent_black');
-            console.log("BLACK");
         }else{
             $('nav').removeClass('transparent_black');
-            console.log("TRANSPARENT");
         }
         /*$('#home').css('background-position','50% ' + (parseInt(-scrl_tp/4) + startingPos)+ 'px');*/
     });     
     
-    
-    
     $('.contact_btn').on('click', function(){
         var elem = $(this).attr('data-target');
-        console.log(elem);
         $('.info').addClass('hiding');
         $('.' + elem).removeClass('hiding');
     });
-    
-    
-    
-    
-    
     
     
     /*  Smooth scrolling nav ...........................................  */

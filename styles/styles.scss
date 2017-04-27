@@ -248,9 +248,9 @@ section {
 .fa-phone,
 .fa-envelope,
 .fa-map-marker {
-    color:$accent_1;
+    color:$white;
     cursor: auto;
-    margin-top:10px;
+    margin-top:16px;
 }
 
 /* NAV .................................................................*/
@@ -267,29 +267,36 @@ nav {
         height: inherit;
         display: block;
         float:right;
-    }
-    ul li {
-        float: left;
-        list-style: none;
-        height: inherit;
-        line-height: 44px;
-        text-transform: uppercase;
-    }
-    ul li:hover {
-        background-color: rgba(255, 255, 255, 0.38);
-        cursor: pointer;
-    }
-    ul li a {
-        font-size: 20px;
-        width: 70px;
-        height: inherit;
-        display: block;
-        margin: 0px;
-        padding: 0;
-        text-align: center;
-    }
-    ul li a:hover > .fa {
-        color:$white;
+        
+        li {
+            float: left;
+            list-style: none;
+            height: 70px;
+            line-height: 44px;
+            text-transform: uppercase;
+            a {
+                font-size: 20px;
+                width: 70px;
+                height: inherit;
+                display: block;
+                margin: 0px;
+                padding: 0;
+                text-align: center;
+                .fa {
+                     -o-transition: all 0.15s ease-out;
+                     -moz-transition: all 0.15s ease-out;
+                     -webkit-transition: all 0.15s ease-out;
+                     transition: all 0.15s ease-out;
+                }
+            }
+            a:hover > .fa {
+                font-size:2.7em;
+            }
+        }
+        li:hover {
+            /*background-color: rgba(255, 255, 255, 0.38);*/
+            cursor: pointer;
+        }
     }
 }
 
@@ -509,6 +516,23 @@ footer {
     #home video {
         width:1200px;
     }
+    footer {
+        .contact_info_holder {
+            height:125px;
+            padding: 17px 0px;
+        }
+        .phone_info,
+        .work_email_info,
+        .personal_email_info,
+        .address_info {
+            font-size:37px;
+        }
+        .address_info {
+            line-height: 42px;
+            width:330px;
+            margin-top:0;
+        }
+    }
 }
 /* BIG SNAP to Mobile */
 @media screen and (max-width: 767px){
@@ -546,8 +570,55 @@ footer {
     .fa {
         font-size: 1.5em;
     }
+    footer {
+        .contact_btn {
+            height: 70px;
+            padding: 5px 0px;
+            width: 100%;
+            margin: 10px auto;
+            text-align:left;
+            P {
+                margin-top:14px;
+            }
+        }
+        .fa {
+            font-size: 2.5em;
+            margin-top:11px;
+            float:left;
+        }
+        .fa-phone {
+            margin-left: 35px;
+        }
+        .fa-university {
+            margin-left: 29px;
+        }
+        .fa-envelope {
+            margin-left: 30px;
+        }
+        .fa-map-marker {
+            margin-left: 37px;
+        }
+    }
 }
-
+@media screen and (max-width:600px){
+    footer {
+        .contact_info_holder {
+            height:70px;
+            padding: 0;
+        }
+        .phone_info,
+        .work_email_info,
+        .personal_email_info,
+        .address_info {
+            font-size:26px;
+        }
+        .address_info {
+            line-height: 42px;
+            width:330px;
+            margin-top:0;
+        }
+    }
+}
 @media screen and (max-width: 500px){
     nav ul {
         width: 90%;

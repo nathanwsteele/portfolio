@@ -5,7 +5,7 @@ $black:#191717;
 $primary: #353333;
 $white: #ededf1;
 $accent_1: #cad1d1;
-$accent_2: #a22828;
+$accent_2: #5a0909;
 
 /* FONT STACK */
 $regular:'Open Sans', sans-serif;
@@ -407,10 +407,10 @@ nav {
     }
 }
 .skills_holder {
+    width: 860px;
     margin: 0 auto;
-    width: 965px;
-    overflow: hidden;
 }
+
 .skill_col {
     float:left;
     width:160px;
@@ -521,9 +521,7 @@ footer {
             height:125px;
             padding: 17px 0px;
         }
-        .phone_info,
         .work_email_info,
-        .personal_email_info,
         .address_info {
             font-size:37px;
         }
@@ -532,6 +530,16 @@ footer {
             width:330px;
             margin-top:0;
         }
+    }
+   
+}
+@media screen and (max-width: 992px){
+    .skills_holder {
+        width:365px;
+    }
+    .skill_col {
+        width: 165px;
+        margin-left: 0;
     }
 }
 /* BIG SNAP to Mobile */
@@ -545,18 +553,26 @@ footer {
     #banner h2 {
         font-size: 1.6em;
     }
-    nav ul {
-        margin: 0 auto;
-        display: block;
-        float: none;
-        width: 60%;
+    nav {
+        ul {
+            margin: 0 auto;
+            display: block;
+            float: none;
+            width: 60%;
+            li {
+                width:16.5%;
+                a {
+                    width:100%;
+                    .fa {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
     }
-    nav ul li {
-        width:16.5%;
-    }
-    nav ul li a {
-        width:100%;
-    }
+  
+  
+    
     #home video {
         width:950px;
     }
@@ -567,9 +583,7 @@ footer {
     .skills_holder {
         width: 365px;
     }
-    .fa {
-        font-size: 1.5em;
-    }
+
     footer {
         .contact_btn {
             height: 70px;
@@ -606,16 +620,25 @@ footer {
             height:70px;
             padding: 0;
         }
-        .phone_info,
         .work_email_info,
-        .personal_email_info,
         .address_info {
             font-size:26px;
         }
-        .address_info {
+        .personal_email_info {
+            margin-top: 0px;
+            font-size: 40px;
+        }
+        .phone_info {
+            font-size: 45px;
+        }
+        .phone_info,
+        .work_email_info {
             line-height: 42px;
-            width:330px;
-            margin-top:0;
+        }
+        .address_info {
+            line-height: 27px;
+            width: 235px;
+            margin-top: 5px;
         }
     }
 }
@@ -644,7 +667,53 @@ footer {
         margin: 0px auto;
     }
 }
-
+@media screen and (max-width:400px){
+    #banner {
+        top: 12%;
+    }
+    footer {
+        .phone_info,
+        .work_email_info,
+        .personal_email_info,
+        .address_info {
+            font-weight: bold;
+        }
+        .phone_info {
+            font-size:36px;
+        }
+        .work_email_info {
+            font-size: 14px;
+        }
+        .personal_email_info {
+            font-size:21px;
+        }
+        .address_info {
+            font-size: 19px;
+            width:205px;
+        }
+    }
+    #skills ul li {
+        height: 35px;
+        line-height: 0px;
+    }
+    .skills_holder {
+        width:95%;
+    }
+    .skill_col {
+        width: 100%;
+    margin-left: 0;
+    text-align: center;
+    }
+    .star_col {
+        display:none;
+    }
+    #value_proposition q {
+        font-size: 24px;
+    }
+    #candidate li {
+        font-size: 20px;
+    }
+}
 
 
 

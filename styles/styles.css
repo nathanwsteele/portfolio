@@ -203,10 +203,10 @@ section {
 .fa-star-o,
 .fa-star-half-o,
 .accent_2 {
-  color: #a22828; }
+  color: #5a0909; }
 
 .accent_2_bg {
-  background-color: #a22828; }
+  background-color: #5a0909; }
 
 .transparent_black {
   background-color: rgba(0, 0, 0, 0.79); }
@@ -359,9 +359,8 @@ nav {
     margin: 0; }
 
 .skills_holder {
-  margin: 0 auto;
-  width: 965px;
-  overflow: hidden; }
+  width: 860px;
+  margin: 0 auto; }
 
 .skill_col {
   float: left;
@@ -452,15 +451,20 @@ footer {
   footer .contact_info_holder {
     height: 125px;
     padding: 17px 0px; }
-  footer .phone_info,
   footer .work_email_info,
-  footer .personal_email_info,
   footer .address_info {
     font-size: 37px; }
   footer .address_info {
     line-height: 42px;
     width: 330px;
     margin-top: 0; } }
+@media screen and (max-width: 992px) {
+  .skills_holder {
+    width: 365px; }
+
+  .skill_col {
+    width: 165px;
+    margin-left: 0; } }
 /* BIG SNAP to Mobile */
 @media screen and (max-width: 767px) {
   #banner {
@@ -477,12 +481,12 @@ footer {
     display: block;
     float: none;
     width: 60%; }
-
-  nav ul li {
-    width: 16.5%; }
-
-  nav ul li a {
-    width: 100%; }
+    nav ul li {
+      width: 16.5%; }
+      nav ul li a {
+        width: 100%; }
+        nav ul li a .fa {
+          font-size: 1.5em; }
 
   #home video {
     width: 950px; }
@@ -493,9 +497,6 @@ footer {
 
   .skills_holder {
     width: 365px; }
-
-  .fa {
-    font-size: 1.5em; }
 
   footer .contact_btn {
     height: 70px;
@@ -521,15 +522,21 @@ footer {
   footer .contact_info_holder {
     height: 70px;
     padding: 0; }
-  footer .phone_info,
   footer .work_email_info,
-  footer .personal_email_info,
   footer .address_info {
     font-size: 26px; }
+  footer .personal_email_info {
+    margin-top: 0px;
+    font-size: 40px; }
+  footer .phone_info {
+    font-size: 45px; }
+  footer .phone_info,
+  footer .work_email_info {
+    line-height: 42px; }
   footer .address_info {
-    line-height: 42px;
-    width: 330px;
-    margin-top: 0; } }
+    line-height: 27px;
+    width: 235px;
+    margin-top: 5px; } }
 @media screen and (max-width: 500px) {
   nav ul {
     width: 90%; }
@@ -553,5 +560,44 @@ footer {
     font-size: 30px;
     width: 90%;
     margin: 0px auto; } }
+@media screen and (max-width: 400px) {
+  #banner {
+    top: 12%; }
+
+  footer .phone_info,
+  footer .work_email_info,
+  footer .personal_email_info,
+  footer .address_info {
+    font-weight: bold; }
+  footer .phone_info {
+    font-size: 36px; }
+  footer .work_email_info {
+    font-size: 14px; }
+  footer .personal_email_info {
+    font-size: 21px; }
+  footer .address_info {
+    font-size: 19px;
+    width: 205px; }
+
+  #skills ul li {
+    height: 35px;
+    line-height: 0px; }
+
+  .skills_holder {
+    width: 95%; }
+
+  .skill_col {
+    width: 100%;
+    margin-left: 0;
+    text-align: center; }
+
+  .star_col {
+    display: none; }
+
+  #value_proposition q {
+    font-size: 24px; }
+
+  #candidate li {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,9 +3,11 @@
 /*$primary: #6d3431; RED */
 /* FONT STACK */
 body {
-  padding: 0px;
+  padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background-color: #191717;
+  overflow-x: hidden; }
 
 .wrapper {
   margin: 0 auto;
@@ -48,7 +50,7 @@ h6 {
 .white_header:after {
   border: 1px solid #ededf1; }
 
-section, footer {
+section, #contact {
   float: none;
   clear: both;
   overflow: hidden;
@@ -216,6 +218,9 @@ section {
   font-size: 2em;
   margin: 0 5px; }
 
+.fa-smile-o {
+  font-size: 1em; }
+
 /* Social Media Icon styles .........................................................  */
 .fa-home,
 .fa-linkedin-square,
@@ -236,6 +241,7 @@ nav {
   width: 100%;
   z-index: 3;
   position: fixed;
+  -webkit-backface-visibility: hidden;
   top: 0;
   right: 0; }
   nav ul {
@@ -379,66 +385,74 @@ nav {
 #work {
   background-color: #ededf1; }
 
-/* FOOTER ....................................................................... */
-footer {
+/* CONTACT ....................................................................... */
+#contact {
   background-color: #191717; }
-  footer .fa {
+  #contact .fa {
     font-size: 3.5em;
     margin: 5px 10px; }
-  footer .contact_btn,
-  footer .contact_info_holder {
+  #contact .contact_btn,
+  #contact .contact_info_holder {
     border: 1px solid #ededf1;
     text-align: center;
     height: 200px;
     margin-bottom: 75px;
     padding: 50px 0px; }
-  footer .contact_btn {
+  #contact .contact_btn {
     cursor: pointer; }
-    footer .contact_btn p {
+    #contact .contact_btn p {
       color: #ededf1; }
-  footer .contact_btn:hover {
+  #contact .contact_btn:hover {
     background-color: #ededf1; }
-    footer .contact_btn:hover h1, footer .contact_btn:hover p, footer .contact_btn:hover .fa {
+    #contact .contact_btn:hover h1, #contact .contact_btn:hover p, #contact .contact_btn:hover .fa {
       color: #191717; }
-    footer .contact_btn:hover .fa {
+    #contact .contact_btn:hover .fa {
       cursor: pointer; }
-  footer .contact_info_holder {
+  #contact .contact_info_holder {
     background-color: #ededf1;
     position: relative; }
-    footer .contact_info_holder p, footer .contact_info_holder a {
+    #contact .contact_info_holder p, #contact .contact_info_holder a {
       color: #191717; }
-    footer .contact_info_holder a {
+    #contact .contact_info_holder a {
       z-index: 2;
       position: absolute;
       left: 0;
       right: 0; }
-  footer .phone_info,
-  footer .work_email_info,
-  footer .personal_email_info,
-  footer .address_info {
+  #contact .phone_info,
+  #contact .work_email_info,
+  #contact .personal_email_info,
+  #contact .address_info {
     display: block;
     line-height: 64px;
     position: absolute;
     left: 0;
     right: 0; }
-  footer .phone_info {
+  #contact .phone_info {
     text-align: center;
     font-size: 70px;
     margin-top: 13px; }
-  footer .work_email_info {
+  #contact .work_email_info {
     text-align: center;
     margin-top: 11px;
     font-size: 50px; }
-  footer .personal_email_info {
+  #contact .personal_email_info {
     text-align: center;
     margin-top: 9px;
     font-size: 60px; }
-  footer .address_info {
+  #contact .address_info {
     text-align: left;
     margin: 0 auto;
     width: 540px;
     margin-top: -18px;
     font-size: 60px; }
+
+/* FOOTER */
+footer {
+  background-color: #ededf1;
+  padding: 10px 0 0 0;
+  text-align: center; }
+  footer p {
+    font-family: "Open Sans", sans-serif; }
 
 /* Media Queries ....................................................................*/
 @media screen and (max-width: 1200px) {
@@ -448,13 +462,13 @@ footer {
   #home video {
     width: 1200px; }
 
-  footer .contact_info_holder {
+  #contact .contact_info_holder {
     height: 125px;
     padding: 17px 0px; }
-  footer .work_email_info,
-  footer .address_info {
+  #contact .work_email_info,
+  #contact .address_info {
     font-size: 37px; }
-  footer .address_info {
+  #contact .address_info {
     line-height: 42px;
     width: 330px;
     margin-top: 0; } }
@@ -498,42 +512,42 @@ footer {
   .skills_holder {
     width: 365px; }
 
-  footer .contact_btn {
+  #contact .contact_btn {
     height: 70px;
     padding: 5px 0px;
     width: 100%;
     margin: 10px auto;
     text-align: left; }
-    footer .contact_btn P {
+    #contact .contact_btn P {
       margin-top: 14px; }
-  footer .fa {
+  #contact .fa {
     font-size: 2.5em;
     margin-top: 11px;
     float: left; }
-  footer .fa-phone {
+  #contact .fa-phone {
     margin-left: 35px; }
-  footer .fa-university {
+  #contact .fa-university {
     margin-left: 29px; }
-  footer .fa-envelope {
+  #contact .fa-envelope {
     margin-left: 30px; }
-  footer .fa-map-marker {
+  #contact .fa-map-marker {
     margin-left: 37px; } }
 @media screen and (max-width: 600px) {
-  footer .contact_info_holder {
+  #contact .contact_info_holder {
     height: 70px;
     padding: 0; }
-  footer .work_email_info,
-  footer .address_info {
+  #contact .work_email_info,
+  #contact .address_info {
     font-size: 26px; }
-  footer .personal_email_info {
+  #contact .personal_email_info {
     margin-top: 0px;
     font-size: 40px; }
-  footer .phone_info {
+  #contact .phone_info {
     font-size: 45px; }
-  footer .phone_info,
-  footer .work_email_info {
+  #contact .phone_info,
+  #contact .work_email_info {
     line-height: 42px; }
-  footer .address_info {
+  #contact .address_info {
     line-height: 27px;
     width: 235px;
     margin-top: 5px; } }
@@ -564,18 +578,18 @@ footer {
   #banner {
     top: 12%; }
 
-  footer .phone_info,
-  footer .work_email_info,
-  footer .personal_email_info,
-  footer .address_info {
+  #contact .phone_info,
+  #contact .work_email_info,
+  #contact .personal_email_info,
+  #contact .address_info {
     font-weight: bold; }
-  footer .phone_info {
+  #contact .phone_info {
     font-size: 36px; }
-  footer .work_email_info {
+  #contact .work_email_info {
     font-size: 14px; }
-  footer .personal_email_info {
+  #contact .personal_email_info {
     font-size: 21px; }
-  footer .address_info {
+  #contact .address_info {
     font-size: 19px;
     width: 205px; }
 

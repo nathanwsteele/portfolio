@@ -18,6 +18,9 @@ $(document).ready(function(){
         $('.' + elem).removeClass('hiding');
     });
     
+    var d = new Date();
+    var year_elem = document.getElementById("current_year");
+    year_elem.innerHTML = d.getFullYear();
     
     /*  Smooth scrolling nav ...........................................  */
     $(function () {

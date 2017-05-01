@@ -11,10 +11,13 @@ $accent_2: #5a0909;
 $regular:'Open Sans', sans-serif;
 $condensed:'Open Sans Condensed', sans-serif;
 
+
 body {
-    padding: 0px;
+    padding: 0;
     margin: 0;
     font-family: $regular;
+    background-color:$black;
+    overflow-x:hidden;
 }
 .wrapper {
     margin:0 auto;
@@ -57,7 +60,7 @@ h6 {
 .white_header:after {
     border: 1px solid $white;
 }
-section, footer {
+section, #contact {
     float: none;
     clear: both;
     overflow: hidden;
@@ -235,6 +238,9 @@ section {
      font-size: 2em;
      margin: 0 5px;
 }
+.fa-smile-o {
+    font-size:1em;
+}
 /* Social Media Icon styles .........................................................  */
 
 
@@ -258,6 +264,7 @@ nav {
     width: 100%;
     z-index: 3;
     position: fixed;
+    -webkit-backface-visibility: hidden;
     top: 0;
     right: 0;
     
@@ -428,8 +435,8 @@ nav {
 #work {
     background-color:$white;
 }
-/* FOOTER ....................................................................... */
-footer {
+/* CONTACT ....................................................................... */
+#contact {
     background-color:$black;
     
     .fa {
@@ -507,6 +514,19 @@ footer {
         font-size:60px;
     }
 }
+
+/* FOOTER */
+
+footer {
+    background-color:$white;
+    padding: 10px 0 0 0;
+    text-align: center;
+    p {
+        font-family:$regular;
+    }
+}
+
+
 /* Media Queries ....................................................................*/
 
 @media screen and (max-width: 1200px){
@@ -516,7 +536,7 @@ footer {
     #home video {
         width:1200px;
     }
-    footer {
+    #contact {
         .contact_info_holder {
             height:125px;
             padding: 17px 0px;
@@ -584,7 +604,7 @@ footer {
         width: 365px;
     }
 
-    footer {
+    #contact {
         .contact_btn {
             height: 70px;
             padding: 5px 0px;
@@ -615,7 +635,7 @@ footer {
     }
 }
 @media screen and (max-width:600px){
-    footer {
+    #contact {
         .contact_info_holder {
             height:70px;
             padding: 0;
@@ -671,7 +691,7 @@ footer {
     #banner {
         top: 12%;
     }
-    footer {
+    #contact {
         .phone_info,
         .work_email_info,
         .personal_email_info,

@@ -117,7 +117,7 @@ nav ul li,
 
 .cta:hover {
   background-color: rgba(255, 255, 255, 0.38);
-  text-shadow: 0px 0px 11px #000000; }
+  text-shadow: 0px 0px 11px #191717; }
 
 .info_card {
   border: 1px solid #ababab;
@@ -133,16 +133,19 @@ nav ul li,
   left: 0;
   right: 0;
   bottom: 0;
-  width: 155px;
+  width: 90px;
   background-color: #191717;
-  height: 50px;
+  height: 90px;
+  border-radius: 100px;
   text-align: center;
-  padding: 12px;
+  padding: 22px 0px;
   border: 1px solid #ededf1;
   margin: auto;
   opacity: 0;
   color: #ededf1;
-  font-size: 18px; }
+  font-size: 22px; }
+  .work_thumb_button .fa {
+    margin: 0; }
 
 .work_thumb_overlay {
   opacity: 0;
@@ -292,6 +295,13 @@ nav {
     position: absolute;
     top: 0;
     height: 100%; }
+  #home #home_logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 2em;
+    color: #ededf1;
+    text-align: center; }
 
 #home, #home .video-container, #home video, #home .filter {
   width: 100%; }
@@ -327,6 +337,24 @@ nav {
   #home_ctas .cta {
     float: left; }
 
+/* ABOUT  ............................................................... */
+#about {
+  background-color: #ededf1;
+  background-image: url("../images/backgrounds/white_hex.jpg");
+  background-attachment: fixed; }
+  #about #nathan_profile {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #ededf1; }
+  #about p {
+    font-size: 30px; }
+  #about .fa {
+    font-size: 40px; }
+  #about .icon {
+    text-align: center; }
+
 /* VALUE PROPOSITION  ............................................................... */
 #value_proposition {
   background-color: #353333; }
@@ -339,6 +367,16 @@ nav {
     display: block;
     margin: 30px auto;
     text-align: center; }
+  #value_proposition #value_icon {
+    color: #fff;
+    text-align: center;
+    /* margin: 0 auto; */
+    display: block;
+    font-size: 5em;
+    left: 0;
+    right: 0;
+    top: -56px;
+    position: absolute; }
 
 #candidate {
   background-color: #353333; }
@@ -481,6 +519,9 @@ footer {
     margin-left: 0; } }
 /* BIG SNAP to Mobile */
 @media screen and (max-width: 767px) {
+  #home_logo {
+    display: none; }
+
   #banner {
     top: 15%; }
 
@@ -573,7 +614,16 @@ footer {
   #value_proposition q {
     font-size: 30px;
     width: 90%;
-    margin: 0px auto; } }
+    margin: 0px auto; }
+  #value_proposition #value_icon {
+    top: -66px;
+    font-size: 4em; }
+
+  #about .fa {
+    font-size: 30px;
+    margin-top: 5px; }
+  #about p {
+    font-size: 24px; } }
 @media screen and (max-width: 400px) {
   #banner {
     top: 12%; }

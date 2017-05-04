@@ -1,6 +1,7 @@
 /* COLOR PALLETTE */
 /*$primary: #123550; BLUE */
 /*$primary: #6d3431; RED */
+/*$white: #ededf1;*/
 /* FONT STACK */
 body {
   padding: 0;
@@ -45,10 +46,10 @@ h6 {
   font-size: 1.25em; }
 
 .white_header {
-  color: #ededf1; }
+  color: #d7dae1; }
 
 .white_header:after {
-  border: 1px solid #ededf1; }
+  border: 1px solid #d7dae1; }
 
 section, #contact {
   float: none;
@@ -67,9 +68,14 @@ p {
   font-size: 22px;
   font-family: "Open Sans Condensed", sans-serif; }
 
+hr {
+  width: 100%;
+  border-top: solid 1px #ababab;
+  display: none; }
+
 /* ......Custom styles ................*/
 .gap {
-  margin: 5px 0 15px 0; }
+  margin-bottom: 30px; }
 
 .light-shadow,
 .info_card {
@@ -88,8 +94,11 @@ p {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
 .hiding {
-  opacity: 0;
-  -webkit-opacity: 0; }
+  filter: alpha(opacity=0);
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0; }
 
 .animate,
 nav ul li,
@@ -139,10 +148,10 @@ nav ul li,
   border-radius: 100px;
   text-align: center;
   padding: 22px 0px;
-  border: 1px solid #ededf1;
+  border: 1px solid #d7dae1;
   margin: auto;
   opacity: 0;
-  color: #ededf1;
+  color: #d7dae1;
   font-size: 22px; }
   .work_thumb_button .fa {
     margin: 0; }
@@ -183,11 +192,11 @@ nav ul li a:hover,
 nav ul li a:focus,
 #banner,
 #banner h1 {
-  color: #ededf1; }
+  color: #d7dae1; }
 
 .white_bg,
 section {
-  background-color: #ededf1; }
+  background-color: #d7dae1; }
 
 /* DARK BROWN ................................................*/
 .primary {
@@ -214,6 +223,8 @@ section {
   background-color: #5a0909; }
 
 .transparent_black {
+  background-color: #191717;
+  /* The Fallback */
   background-color: rgba(0, 0, 0, 0.79); }
 
 /* Icon styles ......................................................... */
@@ -235,7 +246,7 @@ section {
 .fa-phone,
 .fa-envelope,
 .fa-map-marker {
-  color: #ededf1;
+  color: #d7dae1;
   cursor: auto;
   margin-top: 16px; }
 
@@ -290,7 +301,7 @@ nav {
     display: block;
     margin: 0 auto; }
   #home .filter {
-    background-color: rgba(25, 23, 23, 0.72);
+    background-color: rgba(25, 23, 23, 0.42);
     width: 100%;
     position: absolute;
     top: 0;
@@ -300,7 +311,7 @@ nav {
     left: 10px;
     top: 10px;
     font-size: 2em;
-    color: #ededf1;
+    color: #d7dae1;
     text-align: center; }
 
 #home, #home .video-container, #home video, #home .filter {
@@ -339,15 +350,16 @@ nav {
 
 /* ABOUT  ............................................................... */
 #about {
-  background-color: #ededf1;
+  background-color: #d7dae1;
   background-image: url("../images/backgrounds/white_hex.jpg");
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-size: cover; }
   #about #nathan_profile {
     display: block;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 340px;
     padding: 20px;
-    background-color: #ededf1; }
+    background-color: #353333; }
   #about p {
     font-size: 30px; }
   #about .fa {
@@ -359,7 +371,7 @@ nav {
 #value_proposition {
   background-color: #353333; }
   #value_proposition q {
-    color: #ededf1;
+    color: #d7dae1;
     font-style: italic;
     font-size: 40px;
     font-family: "Open Sans Condensed", sans-serif;
@@ -368,7 +380,7 @@ nav {
     margin: 30px auto;
     text-align: center; }
   #value_proposition #value_icon {
-    color: #fff;
+    color: #d7dae1;
     text-align: center;
     /* margin: 0 auto; */
     display: block;
@@ -381,7 +393,7 @@ nav {
 #candidate {
   background-color: #353333; }
   #candidate strong, #candidate li {
-    color: #ededf1;
+    color: #d7dae1;
     font-family: "Open Sans Condensed", sans-serif; }
   #candidate strong {
     font-size: 26px; }
@@ -421,7 +433,7 @@ nav {
 
 /* WORK ................................................................................ */
 #work {
-  background-color: #ededf1; }
+  background-color: #d7dae1; }
 
 /* CONTACT ....................................................................... */
 #contact {
@@ -431,7 +443,7 @@ nav {
     margin: 5px 10px; }
   #contact .contact_btn,
   #contact .contact_info_holder {
-    border: 1px solid #ededf1;
+    border: 1px solid #d7dae1;
     text-align: center;
     height: 200px;
     margin-bottom: 75px;
@@ -439,15 +451,15 @@ nav {
   #contact .contact_btn {
     cursor: pointer; }
     #contact .contact_btn p {
-      color: #ededf1; }
+      color: #d7dae1; }
   #contact .contact_btn:hover {
-    background-color: #ededf1; }
+    background-color: #d7dae1; }
     #contact .contact_btn:hover h1, #contact .contact_btn:hover p, #contact .contact_btn:hover .fa {
       color: #191717; }
     #contact .contact_btn:hover .fa {
       cursor: pointer; }
   #contact .contact_info_holder {
-    background-color: #ededf1;
+    background-color: #d7dae1;
     position: relative; }
     #contact .contact_info_holder p, #contact .contact_info_holder a {
       color: #191717; }
@@ -486,7 +498,7 @@ nav {
 
 /* FOOTER */
 footer {
-  background-color: #ededf1;
+  background-color: #d7dae1;
   padding: 10px 0 0 0;
   text-align: center; }
   footer p {
@@ -591,7 +603,10 @@ footer {
   #contact .address_info {
     line-height: 27px;
     width: 235px;
-    margin-top: 5px; } }
+    margin-top: 5px; }
+
+  hr {
+    display: block; } }
 @media screen and (max-width: 500px) {
   nav ul {
     width: 90%; }
@@ -662,6 +677,9 @@ footer {
     font-size: 24px; }
 
   #candidate li {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  #about .fa {
+    font-size: 25px; } }
 
 /*# sourceMappingURL=styles.css.map */

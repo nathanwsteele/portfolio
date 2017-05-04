@@ -3,7 +3,8 @@ $black:#191717;
 /*$primary: #123550; BLUE */
 /*$primary: #6d3431; RED */
 $primary: #353333;
-$white: #ededf1;
+/*$white: #ededf1;*/
+$white: #d7dae1;
 $accent_1: #cad1d1;
 $accent_2: #5a0909;
 
@@ -78,11 +79,15 @@ p {
     font-size:22px;
     font-family: $condensed;
 }
-
+hr {
+    width:100%;
+    border-top: solid 1px #ababab;
+    display:none;
+}
 /* ......Custom styles ................*/
 
 .gap {
-    margin: 5px 0 15px 0;
+    margin-bottom: 30px;
 }
 .light-shadow,
 .info_card {
@@ -104,8 +109,11 @@ p {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .hiding {
-    opacity:0;
+    filter: alpha(opacity=0);
+    -khtml-opacity: 0;
     -webkit-opacity:0;
+    -moz-opacity: 0;
+    opacity:0;
 }
 .animate,
 nav ul li,
@@ -234,7 +242,8 @@ section {
 }
 
 .transparent_black {
-    background-color: rgba(0, 0, 0, 0.79);
+     background-color: $black; /* The Fallback */
+     background-color: rgba(0, 0, 0, 0.79);
 }       
        
 /* Icon styles ......................................................... */
@@ -327,7 +336,7 @@ nav {
         margin: 0 auto;
     }
     .filter {
-        background-color: rgba(25, 23, 23, 0.72);
+        background-color: rgba(25, 23, 23, 0.42);
         width: 100%;
         position: absolute;
         top: 0;
@@ -338,7 +347,7 @@ nav {
         left: 10px;
         top: 10px;
         font-size: 2em;
-        color: #ededf1;
+        color: $white;
         text-align:center;
     }
 }
@@ -386,12 +395,13 @@ nav {
     background-color:$white;
     background-image:url('../images/backgrounds/white_hex.jpg');
     background-attachment:fixed;
+    background-size:cover;
     #nathan_profile {
-        display:block;
-        margin:0 auto;
-        max-width:300px;
-        padding:20px;
-        background-color:$white;
+        display: block;
+        margin: 0 auto;
+        max-width: 340px;
+        padding: 20px;
+        background-color:$primary;
     }
     p {
         font-size:30px;
@@ -408,7 +418,7 @@ nav {
 #value_proposition {
     background-color:$primary;
     q {
-        color: #ededf1;
+        color: $white;
         font-style: italic;
         font-size: 40px;
         font-family: $condensed;
@@ -418,7 +428,7 @@ nav {
         text-align:center;
     }
     #value_icon {
-        color: #fff;
+        color: $white;
         text-align: center;
         /* margin: 0 auto; */
         display: block;
@@ -432,7 +442,7 @@ nav {
 #candidate {
     background-color:$primary;
     strong, li {
-         color: #ededf1;
+         color: $white;
          font-family: $condensed;
     }
     strong {
@@ -707,6 +717,9 @@ footer {
             margin-top: 5px;
         }
     }
+    hr {
+        display:block;
+    }
 }
 @media screen and (max-width: 500px){
     nav ul {
@@ -793,6 +806,11 @@ footer {
     }
     #candidate li {
         font-size: 20px;
+    }
+    #about {
+        .fa {
+            font-size: 25px;
+        }
     }
 }
 

@@ -1,0 +1,176 @@
+/* COLOR PALETTE */
+$black:#191717;
+$primary: #353333;
+$white: #d7dae1;
+
+body {
+    background-color:$black; 
+}
+h1 {
+    color:$black;
+}
+h1:after {
+    border: 1px solid $black;
+}
+.white_header {
+    color:$white;
+}
+.white_header:after {
+    border: 1px solid $white;
+}
+.cta:hover {
+    background-color: rgba(255, 255, 255, 0.38);
+    text-shadow: 0px 0px 11px $black;
+}
+.work_thumb_button {
+    background-color: $black;
+    border: 1px solid $white;
+    color: $white;
+}
+.work_thumb_overlay {
+    background-color: $black;
+}
+
+/* BLACK ...........................................*/
+.black {
+    color:$black;
+}
+.black_bg {
+    background-color:$black;
+}
+/* WHITE ................................................*/
+.white,
+.cta,
+nav ul li a,
+nav ul li a:hover,
+nav ul li a:focus,
+#banner,
+#banner h1 {
+    color:$white;
+}
+.white_bg,
+section {
+    background-color:$white; 
+}
+/* DARK BROWN ................................................*/
+.primary {
+    color:$primary;
+}
+.primary_bg {
+    background-color:$primary;
+}
+
+/* Social Media Icon styles .........................................................  */
+.fa-home,
+.fa-linkedin-square, 
+.fa-facebook-official,
+.fa-twitter-square,
+.fa-codepen,
+.fa-github,
+.fa-university,
+.fa-phone,
+.fa-envelope,
+.fa-map-marker {
+    color:$white;
+}
+/* NAV .................................................................*/
+nav {
+    background-color: $black;  /*FALLBACK */
+    background-color: rgba(0, 0, 0, 0.79);
+}
+/* HOME.............................................................................. */
+#home {
+    background-color: $black;
+    #home_logo {
+        color: $white;
+    }
+}
+#original_theme {
+    display: block;
+    margin: 0 auto;
+}
+.original_display {
+    display: block;
+}
+#forest_theme,
+#ocean_theme,
+.forest_display,
+.ocean_display {
+    display:none;
+}
+/* ABOUT  ............................................................... */
+#about {
+    background-color:$white;
+    background-image:url('../images/backgrounds/white_hex.jpg');
+    .nathan_profile {
+        background-color:$primary;
+    }
+}
+
+/* VALUE PROPOSITION  ............................................................... */
+#value_proposition {
+    background-color:$primary;
+    q {
+        color: $white;
+    }
+    #value_icon {
+        color: $white;
+    }
+}
+#candidate {
+    background-color:$primary;
+    strong, li {
+         color: $white;
+    }
+}
+
+
+/* WORK ................................................................................ */
+#work {
+    background-color:$white;
+}
+/* CONTACT ....................................................................... */
+#contact {
+    background-color:$black;
+    
+    .contact_btn,
+    .contact_info_holder {
+        border: 1px solid $white;
+    }
+    .contact_btn {
+        cursor:pointer;
+        p {
+            color:$white;
+        }
+    }
+    .contact_btn:hover {
+        background-color:$white;
+        h1, p, .fa {
+            color:$black;
+        }
+    }
+    .contact_info_holder {
+        background-color:$white;
+        p, a {
+            color:$black;
+        }
+    }
+}
+/* Color Palette */
+#color_palette {
+    .cust_btn {
+        border: 1px solid $black;
+        color:$white;
+        background-color: $primary;
+    }
+    .cust_btn:hover {
+        color:$black;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color:$black;
+    color:$white;
+}
+/* Media Queries ....................................................................*/

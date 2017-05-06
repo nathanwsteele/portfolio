@@ -1,19 +1,18 @@
 $(document).ready(function(){
-    var startingPos = 0; /* << This is the value you need to change in order to position the parallax image. The number represents the pixel value of the margin-top. */
+    /*var startingPos = 0;*/ /* << This is the value you need to change in order to position the parallax image. The number represents the pixel value of the margin-top. */
    /* $('#home').css('background-position','50% ' + startingPos + 'px');*/
-    
-   
-    /*$(window).scroll(function(){    
+
+    $(window).scroll(function(){   
+        console.log("Still Scrolling");
         var scrl_tp = $(this).scrollTop();
         if(scrl_tp >= 130){
-            $('nav').addClass('transparent_black');
-        }else{
-            $('nav').removeClass('transparent_black');
+            $('nav').addClass('nav_bg');
+            $(window).unbind('scroll');
         }
-    });   */ 
-   
-    
-    $('.contact_btn').on('click', function(){
+    });  
+        
+    $('a.contact_btn').on('click', function(e){
+        e.preventDefault();
         var elem = $(this).attr('data-target');
         $('.info').addClass('hiding');
         $('.' + elem).removeClass('hiding');

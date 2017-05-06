@@ -322,9 +322,7 @@ nav {
 
 /* VALUE PROPOSITION  ............................................................... */
 #value_proposition {
-    
     q {
-        
         font-style: italic;
         font-size: 40px;
         font-family: $condensed;
@@ -335,7 +333,6 @@ nav {
     }
     #value_icon {
         text-align: center;
-        display: block;
         font-size: 5em;
         left: 0;
         right: 0;
@@ -404,7 +401,8 @@ nav {
         padding: 50px 0px;
     }
     .contact_btn {
-        cursor:pointer;
+        cursor:pointer; 
+        display:block;
     }
     .contact_btn:hover {
         .fa {
@@ -483,6 +481,10 @@ nav {
     #ocean_theme_btn.cust_btn:hover {
         background-image:url('../images/backgrounds/ocean.jpg');
     }
+    .fa {
+        font-size: 1em;
+        margin: 0 10px;
+    }
 }
 
 /* FOOTER */
@@ -491,7 +493,7 @@ footer {
     text-align: center;
     p {
         font-family:$regular;
-    }
+    }  
 }
 /* Media Queries ....................................................................*/
 @media screen and (max-width: 1200px){
@@ -601,6 +603,9 @@ footer {
     #home_ctas {
         top: 30%;
     }
+    #banner {
+        top: 14%;
+    }
     .cta,
     #color_palette .cust_btn {
         margin: 10px 0;
@@ -635,23 +640,23 @@ footer {
     }
     hr {
         display:block;
-    }
+    }  
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px){ 
     nav ul {
         width: 90%;
     }
     #home video {
-        width: 800px;
+        width: 800px; 
+    }
+    #home_ctas {
+        top:225px;
     }
     #banner h1 {
         font-size:1.5em;
     }
     #banner h2 {
         font-size: 1.2em;
-    }
-    #home_ctas {
-        top: 29%;
     }
     .cta {
         font-size: 20px;
@@ -678,9 +683,6 @@ footer {
     }
 }
 @media screen and (max-width:400px){
-    #banner {
-        top: 12%;
-    }
     #contact {
         .phone_info,
         .work_email_info,
@@ -707,7 +709,7 @@ footer {
         line-height: 0px;
     }
     .skills_holder {
-        width:95%;
+        width:95%; 
     }
     .skill_col {
         width: 100%;
@@ -727,5 +729,13 @@ footer {
         .fa {
             font-size: 25px;
         }
+    }
+}
+@media screen and (max-width:300px){
+    #banner {
+        top: 71px;
+    }
+    footer p {
+        font-size:13px;
     }
 }

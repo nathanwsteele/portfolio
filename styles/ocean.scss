@@ -1,7 +1,7 @@
 /* COLOR PALETTE */
 $black:#222d46;
 $primary: #3b6799;
-$white: #d7e1db;
+$white: #d2dde5;
 
 body {
     background-color:$black; 
@@ -25,16 +25,17 @@ h1:after {
 .cta,
 .nathan_profile,
 .cust_btn,
-.palette {
+.palette,
+.shadow_box {
     border-radius: 100px 0 100px 0;
 }
 /* ......Custom styles ................*/
 .cta {
     border: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(34, 45, 70, 0.35);
 }
 .cta:hover {
-    background-color: rgba(255, 255, 255, 0.38);
+    background-color: rgba(34, 45, 70, 0.6);
     text-shadow: 0px 0px 11px $black;
 }
 .info_card {
@@ -92,15 +93,15 @@ section {
     color:$white;
 }
 /* NAV .................................................................*/
-nav {
-    background-color: $primary;  /*FALLBACK */
-    background-color: rgba(34, 45, 70, 0.79);
+.nav_bg {
+    background-color: $black;  /*FALLBACK */
+    background-color: rgba(34, 45, 70, 0.9);
 }
 /* HOME.............................................................................. */
 #home {
     background-color: $black;
     .filter {
-        background-color: rgba(25, 23, 23, 0.42);
+       display:none;
     }
     #home_logo {
         color: $white;
@@ -131,6 +132,10 @@ nav {
     p, 
     .fa {
         color:$black;
+    }
+    .shadow_box {
+        background-color: rgba(255, 255, 255, 0.65);
+        padding: 20px;
     }
 }
 
